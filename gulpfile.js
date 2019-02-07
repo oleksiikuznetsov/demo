@@ -1,6 +1,7 @@
     // create variables for do our task
 const gulp        = require('gulp'),
-      sass        = require('gulp-sass');
+      sass        = require('gulp-sass'),
+      del         = require('del');
 
     // create task's
 
@@ -10,6 +11,11 @@ const gulp        = require('gulp'),
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}))
+});
+
+    // task to clean folder 'dist
+gulp.task('clean', function() {
+    return del.sync('dist');
 });
     // task watch
 gulp.task('watch', function() {
