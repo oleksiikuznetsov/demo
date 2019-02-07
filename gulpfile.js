@@ -10,6 +10,7 @@ gulp.task('sass', function() {
     return gulp.src('app/sass/index.sass', gulp.series('sass'))
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.reload({stream: true}))
 });
 
     // task browser-sync
@@ -25,3 +26,5 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
     gulp.watch('app/sass/index.sass', gulp.series('sass'))
 });
+
+gulp.task('default', gulp.parallel('watch', 'browser-sync'));
