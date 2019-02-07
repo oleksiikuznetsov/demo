@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/oleksiikuznetsov/demo/issues"
   },
-  "homepage": "https://github.com/oleksiikuznetsov/demo#readme"
+  "homepage": "https://github.com/oleksiikuznetsov/demo#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
 }
